@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+        
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/8af31463c0.js" crossorigin="anonymous"></script>
+    <!-- sweet alert -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light pl-5 pr-5 ">
+        <a class="navbar-brand" href="#"><img src="images/logo-2.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="icons">
+                    <div class="icon-container" data-text="Login">
+                        <a href="LOGIN_SIGNUP_FIREBASE/LOGIN_SIGNUP_FIREBASE/index.html">
+                            <img src="images/icons/user.png" alt="">
+                        </a>
+                        <div class="line"></div>
+                        <span class="icon-text">Login</span>
+                    </div>
+
+                    <div class="icon-container" data-text="Add to cart">
+                        <img src="images/icons/bag-shopping.svg" alt="">
+                        <div class="line"></div>
+                        <span class="icon-text">Cart</span>
+
+                    </div>
+                    <div class="icon-container" data-text="Logout">
+                        <img id="logoutUser" src="images/icons/turn-off.png" alt="">
+                        <div class="line"></div>
+                        <span class="icon-text">logout</span>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </nav>
+
+
+    <!-- carousel -->
+    <div>
+        <div id="wrapper">
+            <div id="slider-area" class="owl-carousel">
+                <div style="background-image: url(images/slider\ img-1.jpg);"></div>
+                <div style="background-image: url(images/slider\ img-2.jpg);"></div>
+                <div style="background-image: url(images/slider\ img-3.jpg);"></div>
+            </div>
+        </div>
+
+        <div class="slider-text">
+            <p>-----Winter 2023</p>
+            <h2>Hello New <span>Season</span></h2>
+            <p>LIMITED TIME OFFER - UP TO 60% & FREE SHIPPING </p>
+            <a href="#" class="btn">Discover more</a>
+        </div>
+    </div>
+    <!-- card sec 1 -->
+
+    <div class="card-deck lg-12 md-6 sm-4">
+        <div class="card my-card">
+            <img class="card-img-top" src="images/grid_banner_1.jpg" alt="Card image cap">
+            <div class="centered-text">New <br>Horizons</div>
+            <a class="link-text" href="#">Shop Now</a>
+        </div>
+
+        <div class="card my-card">
+            <img class="card-img-top" src="images/category2.jpg" alt="Card image cap">
+            <div class="centered-text">Summer <br> Hats</div>
+            <a class="link-text" href="#">Shop Now</a>
+
+        </div>
+        <div class="card my-card mycard-2">
+            <div class=" dev-text">Free delivery for Thrift Feshion members</div>
+            <div class=" dev-text-2 centered-text">PROMOTIONS UP TO 10% OFF</div>
+            <a class="dev-text-3" href="#">SEE MORE</a>
+
+        </div>
+    </div>
+    <!-- card sec-2 -->
+    <div class="main ">
+        <h1>BEST SELLING</h1>
+        <div class="links">
+            <a id="saree">SAREE</a>
+            <a id="jeans">JEANS</a>
+            <a id="bags">BAGS</a>
+            <a id="shoes">SHOES</a>
+        </div>
+        <div id="main-cards" class="row row-cols-1 row-cols-md-3 g-4 p-5 ">
+            <!-- object js -->
+
+            <div class="col my-col">
+                <div class="card">
+                    <img src="images/jsr-23-512_1_.jpg" class="card-img-top" alt="...">
+                    <div class="top-right-heart"><img src="images/icons/heart.png" alt=""></div>
+                    <div class="bottom-buttons">
+                        <button>ADD TO CART</button>
+                        <button id="QuickVeiw">QUICK VIEW</button>
+                        <div class="modal" id="imageModal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                        </div>
+                    </div>
+                    <div class="card-body  saree-card">
+                        <h5 class="card-title">Saree</h5>
+                        <h3 class="card-title">SEA GREEN LAWN SAREE</h3>
+                        <p class="card-text">PKR 5,496</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-col">
+                <div class="card">
+                    <img src="images/product-0-2.jpg" class="card-img-top" alt="...">
+                    <div class="top-right-heart"><img src="images/icons/heart.png" alt=""></div>
+                    <div class="bottom-buttons">
+                        <button>ADD TO CART</button>
+                        <button  id="QuickVeiw_2">QUICK VIEW</button>
+                        <div class="modal" id="imageModal_2">
+                            <span class="close" onclick="closeModal2()">x </span>
+                            <img class="modal-content" id="modalImage_2">
+                        </div>
+                    </div>
+                    <div class="card-body  saree-card">
+                        <h5 class="card-title">Jeans</h5>
+                        <h3 class="card-title">Light Blue</h3>
+                        <p class="card-text">PKR 4,496 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-col">
+                <div class="card">
+                    <img src="images/ALEXANDRA - GOLD.jpg" class="card-img-top" alt="...">
+                    <div class="top-right-heart"><img src="images/icons/heart.png" alt=""></div>
+                    <div class="bottom-buttons">
+                        <button>ADD TO CART</button>
+                        <button  id="QuickVeiw_3">QUICK VIEW</button>
+                        <div class="modal" id="imageModal_3">
+                            <span class="close" onclick="closeModal3()">&times;</span>
+                            <img class="modal-content" id="modalImage_3">
+                        </div>                
+                        </div>
+                    <div class="card-body  saree-card">
+                        <h5 class="card-title">Bags</h5>
+                        <h3 class="card-title">ALEXANDRA GOLD </h3>
+                        <p class="card-text">PKR 14,496</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col my-col">
+                <div class="card">
+                    <img src="images/Air-Jordan-1-Brooklyn.jpg" class="card-img-top" alt="...">
+                    <div class="top-right-heart"><img src="images/icons/heart.png" alt=""></div>
+                    <div class="bottom-buttons">
+                        <button>ADD TO CART</button>
+                        <button  id="QuickVeiw_4">QUICK VIEW</button>
+                        <div class="modal" id="imageModal_4">
+                            <span class="close" onclick="closeModal4()">&times;</span>
+                            <img class="modal-content" id="modalImage_4">
+                        </div>                       </div>
+                    <div class="card-body  saree-card">
+                        <h5 class="card-title">Jordan</h5>
+                        <h3 class="card-title">Air Jordan 1 Brooklyn</h3>
+                        <p class="card-text">PKR 14,496</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- SHOP BY     -->
+    <div id="shop-category" class="shop-category">
+        <h1>SHOP BY CATEGORY</h1>
+        <div id="shop-categoryy" class="row row-cols-1 row-cols-md-3 p-5 shop-category-main owl-carousel ">
+            <div class="col">
+                <div class="card h-100 shop-category-card">
+                    <img src="images/category1.jpg" class="card-img-top shop-category-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">ACCESSORIES</h5>
+                        <p class="card-text"> 20 Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shop-category-card">
+                    <img src="images/category2.jpg" class="card-img-top shop-category-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BAGS </h5>
+                        <p class="card-text"> 20 Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shop-category-card">
+                    <img src="images/category3.jpg" class="card-img-top shop-category-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SHOES </h5>
+                        <p class="card-text"> 20 Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shop-category-card">
+                    <img src="images/category4.jpg" class="card-img-top shop-category-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">OUTERWEAR </h5>
+                        <p class="card-text"> 20 Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shop-category-card">
+                    <img src="images/category5.jpg" class="card-img-top shop-category-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> TOP
+                        </h5>
+                        <p class="card-text"> 20 Products</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- NEW SEASON -->
+    <div class="new-season">
+        <div class="new-season-content">
+            <h1>NEW SEASON</h1>
+            <p>New Collection Release</p>
+            <button class="btn btn-light">--Shop Now</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="app.js"></script>
+    <script>
+        // $('#slider-area').owlCarousel({
+        //     loop: true,
+        //     autoplay: true,
+        //     responsive: {
+        //         0: {
+        //             items: 1
+        //         },
+        //         600: {
+        //             items: 1
+        //         },
+        //         1000: {
+        //             items: 1
+        //         }
+        //     }
+        // })
+        // $('#shop-categoryy').shop - category({
+        //     loop: true,
+        //     autoplay: true,
+        //     responsive: {
+        //         0: {
+        //             items: 1
+        //         },
+        //         600: {
+        //             items: 3
+        //         },
+        //         1000: {
+        //             items: 5
+        //         }
+        //     }
+        // })
+
+    </script>
+
+
+    <script src="LOGIN_SIGNUP_FIREBASE/LOGIN_SIGNUP_FIREBASE/logout.js" type="module"></script>
+    <!-- bootstrap links -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
